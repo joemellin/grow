@@ -15,6 +15,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'twilio-ruby', '~> 3.12'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
