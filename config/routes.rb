@@ -6,6 +6,5 @@ Rails.application.routes.draw do
 	get '/signout' => 'sessions#destroy', :as => :signout
 	get '/auth/failure' => 'sessions#failure'
 
-	post '/twilio/receive_call' => 'twilio#receive_call', :as => 'receive_call_twilio'
 	
 end
