@@ -6,8 +6,14 @@ class User < ActiveRecord::Base
       user.uid = auth['uid']
       if auth['info']
          user.name = auth['info']['name'] || ""
+         user.email = auth['info']['email'] || ""
+         user.image = auth['info']['image'] || ""
+         user.location = auth['info']['location'] || ""
+         user.fburl = auth['info']['urls']['Facebook'] || ""
       end
     end
   end
+
+
 
 end

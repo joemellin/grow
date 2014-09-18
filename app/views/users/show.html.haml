@@ -1,3 +1,10 @@
-%h3 User
-%p
-  Name: #{@user.name if @user.name}
+.row
+	.col-md-6.col-md-offset-3.center
+		%h3 Hello #{@user.name}
+		%p
+			- if @user.phone
+				%p Your Number : 
+				%p= @user.phone
+				= link_to "Make a call" , twilio_show_path , :class => "btn btn-default"
+			- else
+				= link_to "Add Phone Number", edit_user_path(@user)

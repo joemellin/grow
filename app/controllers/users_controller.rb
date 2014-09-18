@@ -3,11 +3,36 @@ class UsersController < ApplicationController
   before_filter :correct_user?, :except => [:index]
 
   def index
-    @users = User.all
+    @user = User.all
   end
 
   def show
     @user = User.find(params[:id])
   end
+  def edit
+  	@user = User.find(params[:id])
+  end
+  def update
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: 'Info updated!' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  
+  end
 
-end
+  #def first_name
+    #self.name.blank? ? "" : self.name.split(" ")[0]
+  #end
+  private
+    def user_params
+      params.require(:user).permit(:phone)
+    end
+
+  end
+
+

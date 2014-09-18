@@ -1,0 +1,18 @@
+.row
+	.col-md-8.col-md-offset-2.box
+		.profile_header.center
+			%h1 Edit Your Profile 
+			= form_for @user, html: { multipart: true } do |f|
+				- if @user.errors.any?
+					#error_explanation
+						%h2
+							= pluralize(@user.errors.count, "error")
+							prohibited this pin from being saved:
+						%ul
+							- @user.errors.full_messages.each do |msg|
+								%li= msg
+				.form-group
+					= f.label :phone
+					= f.text_field :phone, class: "form-control"
+				.form-group
+					= f.submit class: "btn btn-primary"
