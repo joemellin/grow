@@ -24,14 +24,6 @@ class TwilioController < ApplicationController
 		redirect_to root_path
 	end
 
-	def conference
-		 response = Twilio::TwiML::Response.new do |r|
-			r.Dial do |d|
-				d.Conference 'BOOM'
-			end
-		end
- 
-		render_twiml response
-	end
+
 
 end
