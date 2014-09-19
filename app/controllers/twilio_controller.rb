@@ -28,6 +28,7 @@ class TwilioController < ApplicationController
 		 response = Twilio::TwiML::Response.new do |r|
 			r.Dial do |d|
 				d.Conference 'BOOM'
+			end
 		end
  
 		render_twiml response
