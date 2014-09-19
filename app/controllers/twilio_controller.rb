@@ -21,8 +21,8 @@ class TwilioController < ApplicationController
 
 	def conference
 		response = Twilio::TwiML::Response.new do |r|
-			r.Dial 
-				r.Number '+13106969558'
+			r.Dial do |d|
+				d.Number '+13106969558'
 		end
 
 		render_twiml response
