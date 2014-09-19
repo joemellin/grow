@@ -12,6 +12,7 @@ class TwilioController < ApplicationController
 		:from => '+1 415-521-1825',
 		:url => 'http://twimlets.com/holdmusic?Bucket=com.twilio.music.rock'
 		)
+		redirect_to root_path
 	end
 
 end
