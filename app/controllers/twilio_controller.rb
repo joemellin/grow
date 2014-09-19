@@ -2,7 +2,7 @@ require 'twilio-ruby'
 
 class TwilioController < ApplicationController
 	include Webhookable
-	
+
 	# Get your Account Sid and Auth Token from twilio.com/user/account
 	skip_before_action :verify_authenticity_token
 
@@ -26,8 +26,7 @@ class TwilioController < ApplicationController
 
 	def conference
 		 response = Twilio::TwiML::Response.new do |r|
-      r.Dial 
-        r.Conference 'EBT Community Connection'
+      r.Dial '+13106969558'
     end
  
     render_twiml response
