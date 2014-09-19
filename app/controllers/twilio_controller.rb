@@ -23,6 +23,7 @@ class TwilioController < ApplicationController
 		response = Twilio::TwiML::Response.new do |r|
 			r.Dial do |d|
 				d.Number '+13106969558'
+			end
 		end
 
 		render_twiml response
