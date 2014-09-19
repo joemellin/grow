@@ -1,11 +1,20 @@
 .row
+	.col-sm-4.col-sm-offset-4.right{:style => "padding: 20px;"}
+		= link_to '<i class="glyphicon glyphicon-cog"></i>'.html_safe, signout_path, :class => "btn btn-default", :style => "color:#fff;background-color:#59FF85; border-color:#fff;border-width: 0px; font-size:1.7em; ", data: { confirm: "Are you sure you would like to log out?" }
+	
+
+
+
+.row
 	.col-md-6.col-md-offset-3.center
-		%h3 Hello #{@user.name}
-		%p
-			- if @user.phone
-				%p Your Number : 
-				%p= @user.phone
-				= link_to "Make a call" , twilio_call_path , :class => "btn btn-default"
-				
-			- else
-				= link_to "Add Phone Number", edit_user_path(@user)
+		
+
+		- if @user.phone && @user.nick
+			%h3{:style => "color: #fff; padding-bottom:50px;font-size:2em;"} Hello #{@user.nick}
+			%p
+				= link_to "Connect" , twilio_call_path , :class => "btn btn-default", :style => "color:#fff;background-color:#59FF85; border-color:#fff;border-width: 2px; font-size:1.7em; "
+
+		- else
+			%h3{:style => "color: #fff; padding-bottom:50px;font-size:2em;"} Hello! Welcome to Circle. To being create your profile.
+			%p
+				= link_to "Create Profile", edit_user_path(@user), :class => "btn btn-default", :style => "color:#fff;background-color:#59FF85; border-color:#fff;border-width: 2px; font-size:1.7em; "

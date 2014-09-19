@@ -1,7 +1,7 @@
 .row
-	.col-md-8.col-md-offset-2.box
+	.col-md-4.col-md-offset-4.col-xs-8.col-xs-offset-2.box
 		.profile_header.center
-			%h1 Edit Your Profile 
+			%h2{:style => "padding:50px 0 20px; color:#fff"}Your Profile 
 			= form_for @user, html: { multipart: true } do |f|
 				- if @user.errors.any?
 					#error_explanation
@@ -11,8 +11,15 @@
 						%ul
 							- @user.errors.full_messages.each do |msg|
 								%li= msg
-				.form-group
-					= f.label :phone
+				.form-group.center{:style => "color:#fff;margin-bottom:30px;"} 
+					= f.label "Create a nick Name", :style => "font-size:1.3em;"
+					= f.text_field :nick, class: "form-control"
+					%p.help-block{:style => "color:#fff;font-size:.9em;"} 
+						This is shared with other memebers.
+				.form-group.center{:style => "color:#fff;margin-bottom:30px; "} 
+					= f.label "Your Cell Phone Number", :style => "font-size:1.3em;"
 					= f.text_field :phone, class: "form-control"
+					%p.help-block{:style => "color:#fff;font-size:.9em;"} 
+						This is always private.
 				.form-group
-					= f.submit class: "btn btn-primary"
+					= f.submit "Save Profile", class: "btn btn-default", :style => "color:#fff;background-color:#59FF85; border-color:#fff;border-width: 2px; font-size:1.7em; margin-top:20px; "
