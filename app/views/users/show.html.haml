@@ -5,6 +5,6 @@
 			- if @user.phone
 				%p Your Number : 
 				%p= @user.phone
-				= link_to "Make a call" , twilio_show_path , :class => "btn btn-default"
+				= link_to "Make a call" , twilio_call_path , :class => "btn btn-default"
 			- else
 				= link_to "Add Phone Number", edit_user_path(@user)
