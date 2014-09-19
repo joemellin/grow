@@ -1,7 +1,7 @@
 class TwilioController < ApplicationController
 	 
 	# Get your Account Sid and Auth Token from twilio.com/user/account
-
+	skip_before_action :verify_authenticity_token
 	 
 	def call
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
