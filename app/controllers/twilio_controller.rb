@@ -16,14 +16,23 @@ class TwilioController < ApplicationController
 		:from => '+14152598215',
 		:url => 'http://growapp.herokuapp.com/twilio/conference'
 		)
-		call_from = client.account.calls.create(
-		:to => '+13106969558',
-		:from => '+14152598215',
-		:url => 'http://growapp.herokuapp.com/twilio/conference'
-		)
+		# call_from = client.account.calls.create(
+		# :to => '+13106969558',
+		# :from => '+14152598215',
+		# :url => 'http://growapp.herokuapp.com/twilio/conference'
+		# )
 		redirect_to root_path
 	end
 
-
+	def conference
+		response = Twilio::TwiML::Response.new do |r|
+			r.Say 'BOOM'
+			r.Dial do |d|
+				d.Conference 'Double BOOM'
+			end
+		end
+ 
+		render_twiml response
+	end
 
 end
