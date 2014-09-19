@@ -15,7 +15,7 @@ class TwilioController < ApplicationController
 		call_from = client.account.calls.create(
 		:to => '+13106969558',
 		:from => '+14152598215',
-		:url => 'http://growapp.herokuapp.com/conference'
+		:url => 'http://growapp.herokuapp.com/twilio/conference'
 		)
 		redirect_to root_path
 	end
