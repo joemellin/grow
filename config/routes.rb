@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 	get '/signout' => 'sessions#destroy', :as => :signout
 	get '/auth/failure' => 'sessions#failure'
 	get 'twilio/call' => 'twilio#call'
+	get 'twilio/join' => 'twilio#join'
 	post '/twilio/conference' => 'twilio#conference'
 end
