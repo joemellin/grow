@@ -4,6 +4,9 @@
 		%meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 		%title= content_for?(:title) ? yield(:title) : 'Grow'
 		%meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Grow'}"}
+		%meta{:content => "True", :name => "HandheldFriendly"}/
+		%meta{:content => "320", :name => "MobileOptimized"}/
+		%meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}/
 		= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
 		= csrf_meta_tags
