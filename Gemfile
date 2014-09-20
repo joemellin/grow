@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'omniauth'
+gem 'e164'
 gem 'omniauth-facebook'
 gem 'twilio-ruby', '~> 3.12'
 group :development do

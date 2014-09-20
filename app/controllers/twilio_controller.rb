@@ -8,13 +8,13 @@ class TwilioController < ApplicationController
 
 	 
 	def call
-
+		user=User.first
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token
 
 		call= client.account.calls.create(
-		:to => '+14152598215',
+		:to => E164.normalize(user.phone),
 		:from => '+14152598215',
 		:url => 'http://growapp.herokuapp.com/twilio/conference_that_calls'
 		)
@@ -43,11 +43,12 @@ class TwilioController < ApplicationController
 	# end
 
 	def conference_that_calls
+		user=User.last
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token
 		call_from = client.account.calls.create(
-		:to => '+13106969558',
+		:to => E164.normalize(user.phone),
 		:from => '+14152598215',
 		:url => 'http://growapp.herokuapp.com/twilio/conference_that_doesnt_call'
 		)
