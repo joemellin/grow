@@ -20690,3 +20690,421 @@ Processing by UsersController#show as HTML
   Rendered users/show.html.haml within layouts/application (14.2ms)
   Rendered layouts/_messages.html.haml (0.2ms)
 Completed 200 OK in 295ms (Views: 291.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 12:54:43 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (5.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 324ms (Views: 322.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 12:54:45 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (0.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 266ms (Views: 264.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 12:56:17 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (5.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 257ms (Views: 256.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-22 12:57:22 -0700
+Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/facebook
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-09-22 12:57:22 -0700
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-22 12:57:23 -0700
+Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/facebook
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-09-22 12:57:23 -0700
+
+
+Started GET "/auth/facebook/callback?code=AQCVCU6RI7F3tIKC9UbZybsuMpPy7JDcF_3ZHnNcOosvirWxH52zug-3gDdcXB72k0YPzAXgbqLBGIv81mFQeViJ4PtjGt2M4ikygCskDpAEAHm-iNlVubfL8zeuMrl0fWadFUthoYxeynsI4HcHUqouWfZ2Qg0-ENK85aY1zNQ8BPMSUJnupc_JIOSTeaXWwUzxyO0WAPyryyAmXW4YINbK_iMtAaqoRT-ukWVKjQpsrm0E46vKufM9rn-PNTUyyzy7MiN_vyRLMAY1kcug4astCyssNEZRmf5gGKE57wdW_Rk3gWHrJOttbboZp9Cg2XQ&state=95cf1898286b030c25bdcd444843b8f20c8ba256f6e31b42" for 127.0.0.1 at 2014-09-22 12:57:23 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCVCU6RI7F3tIKC9UbZybsuMpPy7JDcF_3ZHnNcOosvirWxH52zug-3gDdcXB72k0YPzAXgbqLBGIv81mFQeViJ4PtjGt2M4ikygCskDpAEAHm-iNlVubfL8zeuMrl0fWadFUthoYxeynsI4HcHUqouWfZ2Qg0-ENK85aY1zNQ8BPMSUJnupc_JIOSTeaXWwUzxyO0WAPyryyAmXW4YINbK_iMtAaqoRT-ukWVKjQpsrm0E46vKufM9rn-PNTUyyzy7MiN_vyRLMAY1kcug4astCyssNEZRmf5gGKE57wdW_Rk3gWHrJOttbboZp9Cg2XQ", "state"=>"95cf1898286b030c25bdcd444843b8f20c8ba256f6e31b42", "provider"=>"facebook"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103487682752613'  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 12:57:25 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (12.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 258ms (Views: 255.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 12:57:32 -0700
+Processing by CallsController#connecting as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (9.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 304ms (Views: 302.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 12:57:49 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (5.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 268ms (Views: 265.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 12:58:22 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (12.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 265ms (Views: 259.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 12:58:28 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (13.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 269ms (Views: 256.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:00:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (12.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 275ms (Views: 270.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 13:00:28 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (14.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 258ms (Views: 253.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:00:55 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (5.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (27.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 288ms (Views: 279.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 13:00:59 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (16.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 289ms (Views: 282.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 13:01:07 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (4.5ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 247ms (Views: 242.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 13:01:18 -0700
+Processing by CallsController#connecting as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (6.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 269ms (Views: 268.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:01:26 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (15.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 291ms (Views: 284.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:01:31 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (1.4ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 251ms (Views: 245.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:02:16 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (10.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 319ms (Views: 318.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:03:04 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (1.2ms)
+  Rendered layouts/_messages.html.haml (0.8ms)
+Completed 200 OK in 306ms (Views: 300.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:03:10 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (6.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 247ms (Views: 245.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:03:21 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (6.2ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 256ms (Views: 255.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:03:32 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (6.4ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 334ms (Views: 333.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:04:04 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (1.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 252ms (Views: 241.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:04:08 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (5.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 241ms (Views: 239.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:04:48 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (5.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 258ms (Views: 256.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:05:11 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (0.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 250ms (Views: 249.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:05:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (3.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (10.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 261ms (Views: 253.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 13:05:22 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (21.2ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 259ms (Views: 255.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 13:05:23 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (11.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 287ms (Views: 275.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 13:05:25 -0700
+Processing by CallsController#connecting as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (8.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 272ms (Views: 270.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 13:05:34 -0700
+Processing by CallsController#connecting as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (7.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 257ms (Views: 256.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 13:05:44 -0700
+Processing by CallsController#connecting as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (8.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 244ms (Views: 242.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:05:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (13.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 287ms (Views: 281.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:06:35 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (5.2ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 269ms (Views: 267.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:06:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (1.2ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 259ms (Views: 251.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:07:01 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (5.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 257ms (Views: 256.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 13:07:10 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (16.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 273ms (Views: 269.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:07:13 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (1.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 253ms (Views: 242.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:07:16 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (1.4ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 271ms (Views: 267.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-22 13:07:20 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (8.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 283ms (Views: 282.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 13:07:24 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (13.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 254ms (Views: 250.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 13:07:41 -0700
+Processing by CallsController#connecting as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (2.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 266ms (Views: 264.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 13:08:08 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (1.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 268ms (Views: 263.6ms | ActiveRecord: 0.7ms)
