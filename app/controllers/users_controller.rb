@@ -12,6 +12,13 @@ class UsersController < ApplicationController
   def edit
   	@user = User.find(params[:id])
   end
+  def call
+    @user = User.find(params[:id])
+  end
+
+
+
+
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -34,5 +41,6 @@ class UsersController < ApplicationController
     end
 
   end
+
 
 

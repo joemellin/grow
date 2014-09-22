@@ -8,7 +8,7 @@ class TwilioController < ApplicationController
 
 	 
 	def call
-		user=User.first
+		user= current_user
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token
@@ -18,32 +18,14 @@ class TwilioController < ApplicationController
 		:from => '+14152598215',
 		:url => 'http://growapp.herokuapp.com/twilio/conference_that_calls'
 		)
-
-		# rand_user = 
-
-		# call_from = client.account.calls.create(
-		# :to => '+13106969558',
-		# :from => '+14152598215',
-		# :url => 'http://growapp.herokuapp.com/twilio/conference_that_calls'
-		# )
-		redirect_to root_path
+		redirect_to connecting_path
 	end
 
 
-	# def join
-	# 	account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
-	# 	auth_token = '75a8952da02e44984f2f340f21c29cb8'
-	# 	client = Twilio::REST::Client.new account_sid, auth_token
-	# 	call_from = client.account.calls.create(
-	# 	:to => '+13106969558',
-	# 	:from => '+14152598215',
-	# 	:url => 'http://growapp.herokuapp.com/twilio/conference'
-	# 	)
-	# 	redirect_to root_path
-	# end
+
 
 	def conference_that_calls
-		user=User.last
+		user=User.first
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token

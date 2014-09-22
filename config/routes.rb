@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 	get 'twilio/call' => 'twilio#call'
 	post '/twilio/conference_that_calls' => 'twilio#conference_that_calls'
 	post '/twilio/conference_that_doesnt_call' => 'twilio#conference_that_doesnt_call'
+	get 'connecting' => 'calls#connecting'
+	get 'first' => 'calls#first'
 end
