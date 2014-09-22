@@ -20475,3 +20475,63 @@ Started GET "/first" for 127.0.0.1 at 2014-09-22 12:19:34 -0700
 Processing by CallsController#first as HTML
 Redirected to http://localhost:3000/card.vcf
 Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 12:22:48 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (13.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 305ms (Views: 284.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 12:24:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (16.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 298ms (Views: 267.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/twilio/call" for 127.0.0.1 at 2014-09-22 12:24:04 -0700
+Processing by TwilioController#call as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/connecting
+Completed 302 Found in 2428ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 12:24:07 -0700
+Processing by CallsController#connecting as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (1.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 241ms (Views: 240.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 12:26:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (10.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 277ms (Views: 273.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/first" for 127.0.0.1 at 2014-09-22 12:30:52 -0700
+Processing by CallsController#first as HTML
+Redirected to http://localhost:3000/together.vcf
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/first" for 127.0.0.1 at 2014-09-22 12:30:52 -0700
+Processing by CallsController#first as HTML
+Redirected to http://localhost:3000/together.vcf
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)

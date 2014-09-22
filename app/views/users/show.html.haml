@@ -8,7 +8,7 @@
 				%li{:role => "presentation"}
 					%a{:href => edit_user_path(@user), :role => "menuitem", :tabindex => "-1"} Edit Profile
 				%li{:role => "presentation"}
-					%a{:href => first_path, :role => "menuitem", :tabindex => "-1"} Add Contact
+					%a{:href => first_path, :role => "menuitem", :tabindex => "-1"} Save Contact
 					
 				%li.divider{:role => "presentation"}
 				%li{:role => "presentation"}
@@ -21,7 +21,7 @@
 	.col-md-6.col-md-offset-3.center
 		
 
-		- unless @user.phone && @user.nick
+		- if @user.phone && @user.nick
 			%h3{:style => "color: #fff; padding-bottom:50px;font-size:2.5em;"} Hello #{@user.nick}
 			%p{:style => "color: #fff; padding:0 30px 40px 30px; text-align:left;"} 
 				%b To Connect: 
@@ -34,7 +34,7 @@
 			%h3{:style => "color: #fff;font-size:2.5em;"}Welcome! 
 			%h3{:style => "color: #fff; padding:18px 0 20px;font-size:1.5em;"} To begin:
 			%p
-				= link_to "Add Contact", first_path, :class => "btn btn-default", :style => "color:#fff;background-color:#59FF85; border-color:#fff;border-width: 2px; font-size:1.7em;  margin-bottom:0px;width:180px; "
+				= link_to "Save	 Contact", first_path, :class => "btn btn-default", :style => "color:#fff;background-color:#59FF85; border-color:#fff;border-width: 2px; font-size:1.7em;  margin-bottom:0px;width:180px; "
 			%p.center{:style =>"color:#fff;margin-bottom:10px;font-size:1.5em;"} &
 			%p
 				= link_to "Create Profile", edit_user_path(@user), :class => "btn btn-default", :style => "color:#fff;background-color:#59FF85; border-color:#fff;border-width: 2px; font-size:1.7em; width:180px; "
