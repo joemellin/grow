@@ -3,6 +3,8 @@ require 'twilio-ruby'
 class TwilioController < ApplicationController
 	include Webhookable
 
+	after_filter :set_header
+
 	# Get your Account Sid and Auth Token from twilio.com/user/account
 	skip_before_action :verify_authenticity_token
 
@@ -107,4 +109,21 @@ class TwilioController < ApplicationController
 		render_twiml response
 	end
 
+	def voice_community
+		response = Twilio::TwiML::Response.new do |r|
+			r.Say 'Hi, you have dialed the Together community line.  When Together members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ', :voice => 'alice'
+				r.Play 'http://linode.rabasa.com/cantina.mp3'
+		end
+ 
+		render_twiml response
+	end
+
+	def voice_support
+		response = Twilio::TwiML::Response.new do |r|
+			r.Say 'Hi, you have dialed the Together community line.  When Together members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ', :voice => 'alice'
+			r.Dial '+1452598215'
+		end
+ 
+		render_twiml response
+	end
 end
