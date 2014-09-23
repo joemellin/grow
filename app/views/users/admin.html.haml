@@ -3,11 +3,10 @@
 		%h1.tk-freight-sans-pro.center{:style => "color: #fff; padding:57px 0 50px;font-size:2.5em;"} Pending Users
 		- if current_user.id == 1
 			- @users.each do |u|
-				.div{:style => "padding-bottom:10px;"}
-					%tr
-						- if u.approved == false
-							.col-xs-8{:style => "padding-top: 7px;font-size:1.3em; "}= link_to u.name, edit_user_path(u), :style => " color:#fff"
-							.col-xs-4= link_to "Approve", edit_user_path(u), :class => "btn btn-default"
-						- else 
-							.col-xs-8{:style => "padding-top: 7px;font-size:1.3em;"}= link_to u.name, edit_user_path(u), :style => " color:#fff"
-							.col-xs-4= link_to "Approved", edit_user_path(u), :class => "btn btn-default disabled", :style => "color:#fff;background-color:#58CEEE; border-color:#fff;border-width: 1px"
+				%tr
+					- if u.approved == false
+						.col-xs-8{:style => "padding-top: 7px;font-size:1.3em; "}= link_to u.name, edit_user_path(u), :style => " color:#fff"
+						.col-xs-4= link_to "Approve", edit_user_path(u), :class => "btn btn-default"
+					- else 
+						.col-xs-8{:style => "padding-top: 7px;font-size:1.3em;"}= link_to u.name, edit_user_path(u), :style => " color:#fff"
+						.col-xs-4{:style => "margin:5px 0 5px"}= link_to "Approved", edit_user_path(u), :class => "btn btn-default disabled", :style => "color:#fff;background-color:#58CEEE; border-color:#fff;border-width: 1px"
