@@ -31,7 +31,7 @@
 
 		- if @user.phone && @user.nick && @user.approved
 			%h3.tk-freight-sans-pro{:style => "color: #fff; padding-bottom:50px;font-size:2.5em;"} Hello #{@user.nick}
-			%p{:style => "color: #fff; padding:0 30px 40px 30px; text-align:left;"} 
+			%p{:style => "color: #fff; padding:0 20px 40px 20px; text-align:left;"} 
 				%b To Connect: 
 				Click the below button and your phone will ring and you will be connected to another member.  If you they do not pickup, simply try again.
 			%p
@@ -39,7 +39,7 @@
 
 		- elsif @user.phone && @user.nick
 			%h3.tk-freight-sans-pro{:style => "color: #fff; padding-bottom:20px;font-size:2.5em;"} Awesome!
-			%p{:style => "color: #fff; padding:0 30px 40px 30px; text-align:left;"}   
+			%p{:style => "color: #fff; padding:0 20px 40px 20px; text-align:left;"}   
 				Next, please review the How it Works page.  Then simply click the below button and you will speak with a welcomer who will answer questions and give you access to the community. 
 			%p= link_to "How it Works", howitworks_path, :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em;;width:190px "
 			%p

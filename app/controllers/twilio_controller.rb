@@ -24,7 +24,6 @@ class TwilioController < ApplicationController
 
 
 	def welcome_that_calls
-		user=User.first
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token
@@ -37,7 +36,7 @@ class TwilioController < ApplicationController
 		response = Twilio::TwiML::Response.new do |r|
 			r.Say 'Connecting you with a Welcomer'
 			r.Dial do |d|
-				d.Conference 'Please Hold'
+				d.Conference 'Connecting'
 			end
 		end
  
@@ -46,7 +45,7 @@ class TwilioController < ApplicationController
 
 	def welcome_that_doesnt_call
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say 'Call from #{current_user.nick}'
+			r.Say 'Welcomer Call'
 			r.Dial do |d|
 				d.Conference 'Connecting'
 			end
@@ -54,10 +53,6 @@ class TwilioController < ApplicationController
  
 		render_twiml response
 	end
-
-
-
-
 
 	 
 	def call
