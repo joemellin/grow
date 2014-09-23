@@ -120,8 +120,10 @@ class TwilioController < ApplicationController
 
 	def voice_support
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say 'Hi, you have dialed the Together community line.  When Together members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ', :voice => 'alice'
-			r.Dial '+1452598215'
+			r.Say 'Hi, you have dialed the Together support line.  ', :voice => 'alice'
+			r.Dial :callerId => '+14155211825' do |d|
+    		d.Client '+14158013055'
+  		end
 		end
  
 		render_twiml response
