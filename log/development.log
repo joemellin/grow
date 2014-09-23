@@ -27966,3 +27966,70 @@ Processing by CallsController#howitworks as HTML
   Rendered calls/howitworks.html.haml within layouts/application (47.0ms)
   Rendered layouts/_messages.html.haml (0.2ms)
 Completed 200 OK in 325ms (Views: 324.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:16:50 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (49.2ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 416ms (Views: 414.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:38:49 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (57.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 360ms (Views: 359.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:39:19 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (54.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 318ms (Views: 317.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:40:54 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (51.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 325ms (Views: 324.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:41:36 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (54.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 335ms (Views: 333.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:42:00 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (63.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 304ms (Views: 303.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:42:27 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (91.2ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 416ms (Views: 415.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 18:43:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (2.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 255ms (Views: 252.5ms | ActiveRecord: 0.3ms)
