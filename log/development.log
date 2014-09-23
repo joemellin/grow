@@ -28501,3 +28501,29 @@ Processing by UsersController#admin as HTML
   Rendered users/admin.html.haml within layouts/application (26.6ms)
   Rendered layouts/_messages.html.haml (0.2ms)
 Completed 200 OK in 333ms (Views: 326.4ms | ActiveRecord: 0.4ms)
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"   ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"   ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users"  WHERE (approved is not false)  ORDER BY RANDOM() LIMIT 1
+SQLite3::SQLException: no such column: false: SELECT  "users".* FROM "users"  WHERE (approved is not false)  ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (approved = :true)  ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE (approved = :true)  ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (approved = true)  ORDER BY RANDOM() LIMIT 1[0m
+SQLite3::SQLException: no such column: true: SELECT  "users".* FROM "users"  WHERE (approved = true)  ORDER BY RANDOM() LIMIT 1
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE (approved = t)  ORDER BY RANDOM() LIMIT 1
+SQLite3::SQLException: no such column: t: SELECT  "users".* FROM "users"  WHERE (approved = t)  ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (approved = t)  ORDER BY RANDOM() LIMIT 1[0m
+SQLite3::SQLException: no such column: t: SELECT  "users".* FROM "users"  WHERE (approved = t)  ORDER BY RANDOM() LIMIT 1
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE (approved = :t)  ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (approved = :f)  ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users"  WHERE (approved = true)  ORDER BY RANDOM() LIMIT 1
+SQLite3::SQLException: no such column: true: SELECT  "users".* FROM "users"  WHERE (approved = true)  ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."approved" = 't'  ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."approved" = 't'  ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."approved" = 't'  ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."approved" = 't'  ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."approved" = 't' AND "users"."id" = 1  ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."approved" = 't'  ORDER BY RANDOM() LIMIT 1[0m

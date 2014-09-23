@@ -74,8 +74,8 @@ class TwilioController < ApplicationController
 
 
 	def conference_that_calls
-
-		user=User.order("RANDOM()").limit(1)
+		users = (current_user.blank? ? User.all : User.find(:all, :conditions => ["id != ?", current_user.id]))
+		user = users.where('approved' => true).order("RANDOM()").limit(1)
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token
