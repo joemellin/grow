@@ -6,6 +6,59 @@ class TwilioController < ApplicationController
 	# Get your Account Sid and Auth Token from twilio.com/user/account
 	skip_before_action :verify_authenticity_token
 
+	def welcome
+		user= current_user
+		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
+		auth_token = '75a8952da02e44984f2f340f21c29cb8'
+		client = Twilio::REST::Client.new account_sid, auth_token
+
+		call= client.account.calls.create(
+		:to => E164.normalize(user.phone),
+		:from => '+14155211825',
+		:url => 'http://growapp.herokuapp.com/twilio/welcome_that_calls'
+		)
+		redirect_to connecting_path
+	end
+
+
+
+
+	def welcome_that_calls
+		user=User.first
+		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
+		auth_token = '75a8952da02e44984f2f340f21c29cb8'
+		client = Twilio::REST::Client.new account_sid, auth_token
+		call_from = client.account.calls.create(
+		:to => '+14154469626',
+		:from => '+14155211825',
+		:url => 'http://growapp.herokuapp.com/twilio/welcome_that_doesnt_call'
+		)
+
+		response = Twilio::TwiML::Response.new do |r|
+			r.Say 'Connecting you with a Welcomer'
+			r.Dial do |d|
+				d.Conference 'Please Hold'
+			end
+		end
+ 
+		render_twiml response
+	end
+
+	def welcome_that_doesnt_call
+		response = Twilio::TwiML::Response.new do |r|
+			r.Say 'Call from #{current_user.nick}'
+			r.Dial do |d|
+				d.Conference 'Connecting'
+			end
+		end
+ 
+		render_twiml response
+	end
+
+
+
+
+
 	 
 	def call
 		user= current_user

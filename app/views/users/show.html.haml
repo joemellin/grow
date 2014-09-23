@@ -29,7 +29,7 @@
 	.col-md-6.col-md-offset-3.center
 		
 
-		- if @user.phone && @user.nick && @user.approved && @user.id == 2
+		- if @user.phone && @user.nick && @user.approved && @user.approved
 			%h3.tk-freight-sans-pro{:style => "color: #fff; padding-bottom:50px;font-size:2.5em;"} Hello #{@user.nick}
 			%p{:style => "color: #fff; padding:0 30px 40px 30px; text-align:left;"} 
 				%b To Connect: 
@@ -37,13 +37,13 @@
 			%p
 				= link_to "Connect" , twilio_call_path , :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em; width:190px;"
 
-		- if @user.phone && @user.nick && @user.approved
+		- elsif @user.phone && @user.nick
 			%h3.tk-freight-sans-pro{:style => "color: #fff; padding-bottom:20px;font-size:2.5em;"} Awesome!
 			%p{:style => "color: #fff; padding:0 30px 40px 30px; text-align:left;"}   
 				Next, please review the How it Works page.  Then simply click the below button and you will speak with a welcomer who will answer questions and give you access to the community. 
 			%p= link_to "How it Works", howitworks_path, :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em;;width:190px "
 			%p
-				= link_to "Call Welcomer" , twilio_call_path , :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em;width:190px "
+				= link_to "Call Welcomer" , twilio_welcome_path , :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em;width:190px "
 
 		- else
 			%h3{:style => "color: #fff;font-size:2.5em;"}Welcome! 
