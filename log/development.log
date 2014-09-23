@@ -28033,3 +28033,128 @@ Processing by UsersController#show as HTML
   Rendered users/show.html.haml within layouts/application (2.9ms)
   Rendered layouts/_messages.html.haml (0.2ms)
 Completed 200 OK in 255ms (Views: 252.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:44:28 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (46.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 311ms (Views: 309.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 18:47:59 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/admin.html.haml within layouts/application (7.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 288ms (Views: 282.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 18:48:57 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/admin.html.haml within layouts/application (8.2ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 281ms (Views: 278.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 18:49:17 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/admin.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 265ms (Views: 262.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 18:49:25 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/admin.html.haml within layouts/application (10.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 263ms (Views: 259.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 18:49:38 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/admin.html.haml within layouts/application (10.3ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 273ms (Views: 270.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 18:49:45 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/admin.html.haml within layouts/application (8.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 275ms (Views: 271.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 18:50:15 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/admin.html.haml within layouts/application (14.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 292ms (Views: 287.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 18:50:38 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/admin.html.haml within layouts/application (14.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 260ms (Views: 257.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:50:49 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (63.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 311ms (Views: 309.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 18:50:52 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/admin.html.haml within layouts/application (7.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 260ms (Views: 257.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/howitworks" for 127.0.0.1 at 2014-09-22 18:56:31 -0700
+Processing by CallsController#howitworks as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/howitworks.html.haml within layouts/application (123.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 459ms (Views: 446.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 18:56:35 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (41.4ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 331ms (Views: 326.7ms | ActiveRecord: 0.3ms)
