@@ -34,9 +34,6 @@ class UsersController < ApplicationController
   
   end
 
-  #def first_name
-    #self.name.blank? ? "" : self.name.split(" ")[0]
-  #end
   private
     def user_params
       params.require(:user).permit(:phone, :nick, :approved)
