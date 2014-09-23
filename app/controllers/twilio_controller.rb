@@ -24,11 +24,12 @@ class TwilioController < ApplicationController
 
 
 	def welcome_that_calls
+		user= User.first
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token
 		call_from = client.account.calls.create(
-		:to => '+14154469626',
+		:to => E164.normalize(user.phone),
 		:from => '+14158013055',
 		:url => 'http://growapp.herokuapp.com/twilio/welcome_that_doesnt_call'
 		)
@@ -46,7 +47,7 @@ class TwilioController < ApplicationController
 	def welcome_that_doesnt_call
 		user=current_user
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Welcoming"
+			r.Say "Welcoming Someone"
 			r.Dial do |d|
 				d.Conference 'Connecting'
 			end
@@ -74,7 +75,8 @@ class TwilioController < ApplicationController
 
 
 	def conference_that_calls
-		user=User.first
+
+		user=User.where("approved is not false").order("RANDOM()").limit(1)
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token
