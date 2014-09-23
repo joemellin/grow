@@ -20,5 +20,11 @@
 					= f.text_field :phone, class: "form-control"
 					%p.help-block{:style => "color:#fff;font-size:.9em;"} 
 						PRIVATE
+				- if current_user.id == 1
+					.checkbox
+						= f.label :approved do
+							= f.check_box :approved, :value => true
+					
+
 				.form-group
-					= f.submit "Save Profile", class: "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em; margin-top:10px;width:180px; "
+					= f.submit "Save Profile", class: "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em; margin-top:10px;width:190px; "

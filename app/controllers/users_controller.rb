@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :correct_user?, :except => [:index]
+  before_filter :correct_user?, :except => [:index, :admin]
 
   def index
     @user = User.all
@@ -17,7 +17,9 @@ class UsersController < ApplicationController
   end
 
 
-
+  def admin
+    @users = User.all
+  end
 
   def update
     respond_to do |format|
@@ -37,7 +39,7 @@ class UsersController < ApplicationController
   #end
   private
     def user_params
-      params.require(:user).permit(:phone, :nick)
+      params.require(:user).permit(:phone, :nick, :approved)
     end
 
   end

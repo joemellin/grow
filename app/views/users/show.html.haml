@@ -3,16 +3,24 @@
 
 		.dropdown
 			%button#dropdownMenu1.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button",:class => "btn btn-default", :style => "color:#fff;background-color:#58CEEE; border-color:#fff;border-width: 0px; font-size:1.7em; ",}
-				%span.glyphicon.glyphicon-cog
+				%span.glyphicon.glyphicon-th-list
 			%ul.dropdown-menu.dropdown-menu-right{"aria-labelledby" => "dropdownMenu1", :role => "menu"}
 				%li{:role => "presentation"}
-					%a{:href => edit_user_path(@user), :role => "menuitem", :tabindex => "-1"} Edit Profile
+					%a{:href => user_path(current_user), :role => "menuitem", :tabindex => "-1"} Home
+				%li{:role => "presentation"}
+					%a{:href => howitworks_path, :role => "menuitem", :tabindex => "-1"} How it Works
+				%li{:role => "presentation"}
+					%a{:href => edit_user_path(current_user), :role => "menuitem", :tabindex => "-1"} Edit Profile
 				%li{:role => "presentation"}
 					%a{:href => first_path, :role => "menuitem", :tabindex => "-1"} Save Contact
-					
+				- if current_user.id == 1
+					%li{:role => "presentation"}
+						%a{:href => '/users/1/admin', :role => "menuitem", :tabindex => "-1"} Admin
+
 				%li.divider{:role => "presentation"}
 				%li{:role => "presentation"}
 					%a{:href => signout_path, :role => "menuitem", :tabindex => "-1"} Sign Out
+			
 			
 
 
@@ -21,20 +29,27 @@
 	.col-md-6.col-md-offset-3.center
 		
 
-		- if @user.phone && @user.nick
+		- if @user.phone && @user.nick && @user.approved && @user.id == 2
 			%h3.tk-freight-sans-pro{:style => "color: #fff; padding-bottom:50px;font-size:2.5em;"} Hello #{@user.nick}
 			%p{:style => "color: #fff; padding:0 30px 40px 30px; text-align:left;"} 
 				%b To Connect: 
 				Click the below button and your phone will ring and you will be connected to another member.  If you they do not pickup, simply try again.
 			%p
-				= link_to "Connect" , twilio_call_path , :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em; width:180px;"
+				= link_to "Connect" , twilio_call_path , :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em; width:190px;"
 
+		- if @user.phone && @user.nick && @user.approved
+			%h3.tk-freight-sans-pro{:style => "color: #fff; padding-bottom:20px;font-size:2.5em;"} Awesome!
+			%p{:style => "color: #fff; padding:0 30px 40px 30px; text-align:left;"}   
+				Next, please review the How it Works page.  Then simply click the below button and you will speak with a welcomer who will answer questions and give you access to the community. 
+			%p= link_to "How it Works", howitworks_path, :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em;;width:190px "
+			%p
+				= link_to "Call Welcomer" , twilio_call_path , :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em;width:190px "
 
 		- else
 			%h3{:style => "color: #fff;font-size:2.5em;"}Welcome! 
 			%h3{:style => "color: #fff; padding:18px 0 20px;font-size:1.5em;"} To begin:
 			%p
-				= link_to "Save	 Contact", first_path, :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em;  margin-bottom:0px;width:180px; "
+				= link_to "Save	 Contact", first_path, :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em;  margin-bottom:0px;width:190px; "
 			%p.center{:style =>"color:#fff;margin-bottom:10px;font-size:1.5em;"} &
 			%p
-				= link_to "Create Profile", edit_user_path(@user), :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em; width:180px; "
+				= link_to "Create Profile", edit_user_path(@user), :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em; width:190px; "

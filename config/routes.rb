@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 	post '/twilio/conference_that_doesnt_call' => 'twilio#conference_that_doesnt_call'
 	get 'connecting' => 'calls#connecting'
 	get 'first' => 'calls#first'
+	get '/users/:id/admin' => 'users#admin'
+	get 'howitworks' => 'calls#howitworks'
 end

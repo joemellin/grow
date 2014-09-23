@@ -1,0 +1,328 @@
+.row	
+	.col-sm-4.col-sm-offset-4.right{:style => "padding: 10px 5px 0px;"}
+
+		.dropdown
+			%button#dropdownMenu1.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button",:class => "btn btn-default", :style => "color:#fff;background-color:#58CEEE; border-color:#fff;border-width: 0px; font-size:1.7em; ",}
+				%span.glyphicon.glyphicon-th-list
+
+			%ul.dropdown-menu.dropdown-menu-right{"aria-labelledby" => "dropdownMenu1", :role => "menu"}
+				%li{:role => "presentation"}
+					%a{:href => user_path(current_user), :role => "menuitem", :tabindex => "-1"} Home
+				%li{:role => "presentation"}
+					%a{:href => howitworks_path, :role => "menuitem", :tabindex => "-1"} How it Works
+				%li{:role => "presentation"}
+					%a{:href => edit_user_path(current_user), :role => "menuitem", :tabindex => "-1"} Edit Profile
+				%li{:role => "presentation"}
+					%a{:href => first_path, :role => "menuitem", :tabindex => "-1"} Save Contact
+				- if current_user.id == 1
+					%li{:role => "presentation"}
+						%a{:href => '/users/1/admin', :role => "menuitem", :tabindex => "-1"} Admin
+
+				%li.divider{:role => "presentation"}
+				%li{:role => "presentation"}
+					%a{:href => signout_path, :role => "menuitem", :tabindex => "-1"} Sign Out
+			
+.row
+	.col-md-6.col-md-offset-3
+		%h3.tk-freight-sans-pro.center{:style => "color: #fff; padding-bottom:20px;font-size:2.5em;"} How it Works
+
+		#accordion.panel-group
+			.panel.panel-default
+				.panel-heading
+					%h4.panel-title.center
+						%a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+							How this to Use this App
+				#collapseOne.panel-collapse.collapse
+					.panel-body
+						This app anonymously connects you with other people using the EBT tools to process stress and live amazing lives.  
+						%br
+						%br
+						The goal of this app is to be the most effective place for you to process your emotions and feel great. 
+						%br
+						%br
+						People find that daily use of these tools and connecting with others, greatly increases happiness and reduces stress.
+			.panel.panel-default
+				.panel-heading
+					%h4.panel-title.center
+						%a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOneA"}
+							The Proceedure of a Call
+				#collapseOneA.panel-collapse.collapse
+					.panel-body
+						Calls have a limit 10 minutes per person.
+						%br
+						%br
+						1) Two members are connected in a conference call
+						%br
+						%br
+						2) They decide who goes first
+						%br
+						%br
+						3) The first person says their Brain State and decides whether or not they would like to use the corresponding Tool.
+						%br
+						%br
+						4) Once they are done, the second person gives the first person a Connecting Message
+						%br
+						%br
+						5) Now the second person says their Brain State and decides whether or not they would like to use the corresponding Tool.
+						%br
+						%br
+						6) When finished, the first person gives the second person a Connecting Message
+						%br
+						%br
+						7) The say goodbye and have great days
+
+
+
+
+
+			.panel.panel-default
+				.panel-heading
+					%h4.panel-title.center
+						%a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+							Example of a Call
+				#collapseTwo.panel-collapse.collapse
+					.panel-body
+						The person initiating the call (John) opens the app and presses the "Connect" button.  John's receives a call from the "Together" number and he answers it.  He is told the nick name of the person he is going to be connected with and hears "hold" music.
+						%br
+						%br
+						The call receiver (Mary) is a member of the community and just finished a business meeting.  She receives a phone call from the "Together" number and has 20 minutes before her next meeting, so she answers it.  
+						%br
+						%br
+						When she answers the phone she is told she is speaking with John and is connected to the conference call with John.
+						%br
+						%br
+						Mary: "Hi John"
+						%br
+						John: "Hi Mary"
+						%br
+						John: "Would you like to go first"
+						%br
+						Mary: "Yes, I am at Brain State 2 and I would like to use the 2 Tool"
+						%br
+						Mary: "Okay here I go.  I feel tired, hungry and grateful. My strongest feeling is being tired. The corresponding need is that I need to cancel diner tonight so I can rest.  Do I need support? No.  I can do this!"
+						%br
+						Mary: "Okay I am done!"
+						%br
+						John: "Are you open to a connecting message?"
+						%br
+						Mary: "Yes"
+						%br
+						John: "When you did your work I felt sad when you said you were tired. The gift to me was when you said "I can do this" because it made me realize that I could do the same.
+						%br
+						Mary: "Thank you for that!  Would you like to do work? I have 10 more minutes."
+						%br
+						John: "Yes" 
+						%br
+						%br 
+						(John follows the same process as Mary)
+
+			.panel.panel-default
+				.panel-heading
+					%h4.panel-title.center
+						%a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+							What are Brain States?
+				#collapseThree.panel-collapse.collapse
+					.panel-body
+						There are 3 main parts of the human brain.  Neuroscience has shown us that someones stress level dictates which of these 3 sections of the brain is active.
+						%br
+						%br 
+						The "Reptilian Brain" is, in terms of evolutionary biology, our oldest brain.  It is at the base of our brain and controls things like our heart beat and other subconscious functions.   It is also the location of the brain where the "Fight or Flight" response lives.  This brain is designed to make quick decisions to keep us alive when we are in a high state of stress. 
+						%br
+						%br  
+						When this brain is active, this is called Brain State 5.
+						%br
+						%br
+						Above the "Reptilian Brain" is the "Mammalian Brain" or "Limbic System."   Is the seat of your emotions.  This brain is active at Brain States 3 & 4.
+						%br
+						%br
+						Finally, above the Mammalian Brain is the NeoCortex which is is where you do most of your thinking, planning, and reasoning.  This is active at Brain State 1 and 2.
+						%br
+						%br
+						In each of these different levels of stress, or Brain State, the most effective way to process stress changes.  This is why there is a corresponding tool for each state.
+
+			.panel.panel-default
+				.panel-heading
+					%h4.panel-title.center
+						%a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFour"}
+							What are the 5 Tools?
+				#collapseFour.panel-collapse.collapse
+					.panel-body
+						Tool 5 - Stressed Out - "Reptilian Brain" Active
+						%br
+						%br
+
+						This tools is designed to help you acknowledge your stress and to minimize the harm you do while in this state.
+						%br
+						%br
+
+						Repeat the following words until you feel stress fade (10-20+ times)
+						%br
+						%br
+
+						Do not judge.
+						%br
+						Minimize harm.
+						%br
+						Know it will pass.
+						%br
+						%br
+
+						Tool 4 - Stressed 
+						%br
+						%br
+
+						You are stressed about a specific topic but are not stressed to the point where you cannot feel your feelings.
+						%br
+						%br
+
+						This tool is designed for you to process your emotions about a specific subject and then gain a learning so it will not cause you stress in the future.  Focus on instensly feeling each emotion and expressing them, once they one emotion is fully expressed it tends to lead into the following emotion.
+						%br
+						%br
+
+						Thinking Journal : Describe the situtation you are stressed in factual terms until you feel yourself start to have intense emotions (we suggest finding anger).  Use short sentences to express your feelings.
+						%br
+						%br
+
+						I feel angry that... 
+						%br  
+						I feel sad that...
+						%br
+						I feel afraid that...
+						%br
+						I feel guilty that... (my part of it is)
+						%br
+						My Unreasonable Expectation is...  (the underlying assumption that I have that would cause me to think like this)
+						%br
+						My Reasonable Expectation  (The healthy opposite)
+						%br
+						I feel grateful that..
+						%br
+						I feel happy that...
+						%br
+						I feel secure that...
+						%br
+						I feel proud that...
+						%br
+						%br
+
+						Tool 3 - A Little Stressed
+						%br
+						%br
+
+						This tool is designed for when you feel stressed but more of a general feeling than about a specific topic.  Use the "Natural Flow of Feelings" to express your emotions.  It is common that each feeling could be on about a different subject.
+						%br
+						%br
+
+						I feel angry that...
+						%br
+						I feel sad that...
+						%br
+						I feel afraid that...
+						%br
+						I feel guilty that...
+						%br
+						I feel grateful that...
+						%br
+						I feel happy that... 
+						%br
+						I feel secure that...
+						%br
+						I feel proud that...
+						%br
+						%br
+
+						Tool 2 - Feeling Okay
+						%br
+						%br
+
+						This is tool is intended for when you feel fine but not amazing. There is normally something small that is keeping you from feeling grate.  Follow the below prompts to process that last bit of stress.
+						%br
+						%br
+
+						My top 3 emotions are...
+						%br
+						My strongest emotion is...
+						%br
+						The corresponding need is...
+						%br
+						Do I need support?
+						%br
+						%br
+
+						Tool 1 - Feeling Great
+						%br
+						%br
+
+						This tool is designed to strengthen your feeling and help your brain become more comfortable in this state.  Say the following words to yourself and feel them in your body.
+						%br
+						%br
+
+						Take a deep breath...
+						%br
+						Shoulders back... Assume good body posture
+						%br
+						Lovingly observe yourself.
+						%br
+						Connect with your sanctuary, the safe place within.
+						%br
+						Feel a wave of compassion for yourself.
+						%br
+						Feel a wave of compassion for others.
+						%br
+						Feel a wave of compassion for all living beings.
+						%br
+						Feel a surge of joy!
+			.panel.panel-default
+				.panel-heading
+					%h4.panel-title.center
+						%a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFive"}
+							How to give a Connecting Message
+				#collapseFive.panel-collapse.collapse
+					.panel-body
+						When listening to someone use a tool, notice how you are feeling while they are doing their work.  If something they say evokes a strong feeling or sensation in you, remember that.
+						%br
+						%br
+						When the person says that they are finished with their work, ask them if they are open for a Connecting Message. 
+						%br
+						%br
+						If they say yes, then use the following format.
+						%br
+						%br 
+						When you did your work the feelings in sensations in my body were...
+						%br
+						%br
+						EX: I felt a sinking feeling and sadness when you talked about your sick dog.
+						%br
+						%br
+						Your work was a gift to me because...
+						%br
+						%br
+						EX: It was a gift to me because I feel inspired by your courage.
+						%br
+						%br
+						It is important that you only talk about how it effected you and do not offer opinions or advice on what they shared.
+			.panel.panel-default
+				.panel-heading
+					%h4.panel-title.center
+						%a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseSix"}
+							Call Safety Guidelines
+				#collapseSix.panel-collapse.collapse
+					.panel-body  
+						Nurturing Voice - Use a nurturing voice towards yourself and others.
+						%br
+						%br
+						Be Positive - Offer no judgements or criticisms.
+						%br
+						%br 
+						No Chit Chat - Calls are about focusing on doing work.
+						%br
+						%br
+						Avoid Intrusions - Do not interrupt or give unasked for advice.
+						%br
+						%br
+						Confidentiality - Allow for anonymity and confidentiality.
+						%br
+						%br
+						If there is a violation of any of these items please contact support.
+			
+		.center=link_to "Home", user_path(current_user), class: "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em; margin-top:10px;width:190px;margin-bottom:30px; "
