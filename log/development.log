@@ -28420,3 +28420,84 @@ Processing by CallsController#connecting as HTML
   Rendered calls/connecting.html.haml within layouts/application (19.3ms)
   Rendered layouts/_messages.html.haml (0.3ms)
 Completed 200 OK in 370ms (Views: 365.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 20:57:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (28.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 546ms (Views: 514.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/twilio/call" for 127.0.0.1 at 2014-09-22 20:57:08 -0700
+Processing by TwilioController#call as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/connecting
+Completed 302 Found in 1393ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 20:57:09 -0700
+Processing by CallsController#connecting as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (1.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 294ms (Views: 293.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 20:57:50 -0700
+Processing by CallsController#connecting as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (30.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 320ms (Views: 317.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-22 20:57:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (1.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 306ms (Views: 300.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/twilio/call" for 127.0.0.1 at 2014-09-22 20:57:54 -0700
+Processing by TwilioController#call as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/connecting
+Completed 302 Found in 1363ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/connecting" for 127.0.0.1 at 2014-09-22 20:57:55 -0700
+Processing by CallsController#connecting as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered calls/connecting.html.haml within layouts/application (2.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 286ms (Views: 284.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-09-22 21:35:55 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/edit.html.haml within layouts/application (27.4ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 540ms (Views: 337.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/users/1/admin" for 127.0.0.1 at 2014-09-22 21:36:00 -0700
+Processing by UsersController#admin as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/admin.html.haml within layouts/application (26.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 333ms (Views: 326.4ms | ActiveRecord: 0.4ms)
