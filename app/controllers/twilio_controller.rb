@@ -120,10 +120,9 @@ class TwilioController < ApplicationController
 
 	def voice_support
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say 'Hi, you have dialed the Together support line.  ', :voice => 'alice'
-				r.Dial :timeout => 30 :callerId => '+14158013055' do |d|
-					d.Number '+14152598215'
-				end 
+			r.Dial :timeout => 30 :callerId => '+14158013055' do |d|
+				d.Number '+14152598215'
+			end 
 		end
  
 		render_twiml response
