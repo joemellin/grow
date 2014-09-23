@@ -44,8 +44,9 @@ class TwilioController < ApplicationController
 	end
 
 	def welcome_that_doesnt_call
+		user=current_user
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Welcoming #{current_user.nick}"
+			r.Say "Welcoming #{user.phone}"
 			r.Dial do |d|
 				d.Conference 'Connecting'
 			end
