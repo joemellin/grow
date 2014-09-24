@@ -87,7 +87,7 @@ class TwilioController < ApplicationController
 		)
 
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Calling #{user.nick} if they do not pick up in 30 seconds please hang up and try"
+			r.Say "Calling #{user.nick} if they do not pick up in 30 seconds please hang up and try again"
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
@@ -98,7 +98,7 @@ class TwilioController < ApplicationController
 
 	def conference_that_doesnt_call
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Feel community call from #{@caller.nick}"
+			r.Say "Feel community call"
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
