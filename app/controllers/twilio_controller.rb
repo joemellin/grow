@@ -87,7 +87,7 @@ class TwilioController < ApplicationController
 		)
 
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say user.nick
+			r.Say "Calling #{user.nick}"
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
