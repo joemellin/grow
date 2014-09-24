@@ -73,10 +73,8 @@ class TwilioController < ApplicationController
 	end
 
 
-
-
 	def conference_that_calls
-		users = (current_user.blank? ? User.all : User.find(:all, :conditions => ["id != ?", current_user.id]))
+		users = (current_user.blank? ? User.all : User.where.not(:id => current_user.id))
 		user_hash = users.where('approved' => true).order("RANDOM()").limit(1)
 		user = user_hash.first
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
@@ -89,7 +87,7 @@ class TwilioController < ApplicationController
 		)
 
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say 'BOOM'
+			r.Say "Thank you #{current_user.nick}, your identity has been verified."
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
