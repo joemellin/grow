@@ -6,8 +6,14 @@ class UsersController < ApplicationController
     @user = User.all
   end
 
+
+
   def show
     @user = User.find(params[:id])
+    @total = Rating.where('success' => true).count
+    myratings = Rating.where('user_id' => current_user.id).where('success' => true)
+
+    @mycount = myratings.count
   end
   def edit
   	@user = User.find(params[:id])

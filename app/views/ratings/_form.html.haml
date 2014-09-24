@@ -1,0 +1,33 @@
+= form_for @rating do |f|
+	- if @rating.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@rating.errors.count, "error")} prohibited this rating from being saved:"
+			%ul
+				- @rating.errors.full_messages.each do |msg|
+					%li= msg
+	.field
+		%p{:style => "color: #fff;  font-size:1.2em;"}  Did you Connect?
+		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
+			= f.radio_button :success, false
+			= f.label "No"
+		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
+			= f.radio_button :success, true
+			= f.label "Yes"
+		%p{:style => "color: #fff;  font-size:1.2em; padding-top:20px"}  Favorite this Member?
+		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
+			= f.radio_button :favorite, false
+			= f.label "No"
+		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
+			= f.radio_button :favorite, true
+			= f.label "Yes"
+		%p{:style => "color: #fff; font-size:1.2em; padding-top:20px"}  Safety Guildines Followed?
+		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
+			= f.radio_button :safety, false
+			= f.label "No"
+		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
+			= f.radio_button :safety, true
+			= f.label "Yes"
+
+	.actions{:style => "padding: 20px;"}
+		= f.submit 'Continue',  :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#58CEEE; border-color:#fff;border-width: 2px; font-size:1.7em; width:180px;"
+	

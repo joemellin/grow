@@ -19,7 +19,10 @@
 				- if current_user.id == 1
 					%li{:role => "presentation"}
 						%a{:href => '/users/1/admin', :role => "menuitem", :tabindex => "-1"} Admin
-
+					%li{:role => "presentation"}
+						%a{:href => new_rating_path, :role => "menuitem", :tabindex => "-1"} Record a call
+					%li{:role => "presentation"}
+						%a{:href => ratings_path, :role => "menuitem", :tabindex => "-1"} View all ratings
 				%li.divider{:role => "presentation"}
 				%li{:role => "presentation"}
 					%a{:href => signout_path, :role => "menuitem", :tabindex => "-1"} Sign Out
@@ -33,14 +36,19 @@
 			%h3.tk-freight-sans-pro{:style => "color: #fff; padding-bottom:5px;font-size:2.5em;"} Hello #{@user.nick}
 			%p.center{:style => "color: #fff; padding-bottom:0px;font-size:.8em;line-height:.1em;text-decoration:underline;"} 
 				%b STATUS 
-			%p.center{:style => "color: #fff; padding-bottom:30px;font-size:.9em;"} Community Member 
-			%p{:style => "color: #fff; padding:0 20px 40px 20px; text-align:left;font-size:1.2em;"} 
-				%b To Connect: 
-				Click the below button and you will be connected to another member.  If you they do not pickup, simply try again.
-			%p
+			%p.center{:style => "color: #fff; padding-bottom:20px;font-size:.9em;"} Community Member 
+			.row
+				.col-xs-12.center
+					%p.center{:style => "color: #fff; font-size:6em;line-height:80px;"}= @mycount
+					%p{:style => "color: #fff; line-height:26px;margin:0; font-size:1.2em"}Connections Made
+
+
+			
+			%p{:style => "padding-top:40px;"}
 				= link_to twilio_call_path , :class => "btn btn-default btn-lg", :style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.7em; width:190px;padding-right:30px;" do
 					%span.glyphicon.glyphicon-earphone
 					Connect
+			
 
 		- elsif @user.phone && @user.nick
 			%h3.tk-freight-sans-pro{:style => "color: #fff; padding-bottom:5px;font-size:2.5em;"} Hello #{@user.nick}

@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
     end
   end
 
-
+  has_many :ratings
 
 end
