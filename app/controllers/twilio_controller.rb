@@ -17,7 +17,7 @@ class TwilioController < ApplicationController
 		call= client.account.calls.create(
 		:to => E164.normalize(user.phone),
 		:from => '+14158013055',
-		:url => 'http://growapp.herokuapp.com/twilio/welcome_that_calls'
+		:url => 'http://www.feelbyebt.com/twilio/welcome_that_calls'
 		)
 		redirect_to connecting_path
 	end
@@ -32,7 +32,7 @@ class TwilioController < ApplicationController
 		call_from = client.account.calls.create(
 		:to => '+14154469626',
 		:from => '+14158013055',
-		:url => 'http://growapp.herokuapp.com/twilio/welcome_that_doesnt_call'
+		:url => 'http://www.feelbyebt.com/twilio/welcome_that_doesnt_call'
 		)
 
 		response = Twilio::TwiML::Response.new do |r|
@@ -67,7 +67,7 @@ class TwilioController < ApplicationController
 		call= client.account.calls.create(
 		:to => E164.normalize(user.phone),
 		:from => '+14155211825',
-		:url => 'http://growapp.herokuapp.com/twilio/conference_that_calls'
+		:url => 'http://www.feelbyebt.com/twilio/conference_that_calls'
 		)
 		redirect_to connecting_path
 	end
@@ -85,7 +85,7 @@ class TwilioController < ApplicationController
 		call_from = client.account.calls.create(
 		:to => E164.normalize(user.phone),
 		:from => '+14155211825',
-		:url => 'http://growapp.herokuapp.com/twilio/conference_that_doesnt_call'
+		:url => 'http://www.feelbyebt.com/twilio/conference_that_doesnt_call'
 		)
 
 		response = Twilio::TwiML::Response.new do |r|
@@ -111,7 +111,7 @@ class TwilioController < ApplicationController
 
 	def voice_community
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say 'Hi, you have dialed the Together community line.  When Together members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ', :voice => 'alice'
+			r.Say 'Hi, you have dialed the feel community line.  When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ', :voice => 'alice'
 				r.Play 'http://linode.rabasa.com/cantina.mp3'
 		end
  
