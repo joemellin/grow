@@ -1,22 +1,21 @@
-%h1 Listing ratings
+.row
+	.col-md-4.col-md-offset-4
+		.center
+			%h1{:style => "color:#fff"}
+				= @ratings.count
+				Calls Made
+		%table{:style => "width: 100%;color:#fff"}
+			%tr
+				%th Success
+				%th Safety
+				%th Favorite
+				%th User
+				%th Created
 
-%table
-  %tr
-    %th Success
-    %th
-    %th
-    %th
-
-  - @ratings.each do |rating|
-    %tr
-      %td= rating.success
-      %td= rating.safety
-      %td= rating.favorite
-      %td= rating.user_id
-      %td= link_to 'Show', rating
-      %td= link_to 'Edit', edit_rating_path(rating)
-      %td= link_to 'Destroy', rating, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Rating', new_rating_path
+			- @ratings.each do |rating|
+				%tr
+					%td= rating.success
+					%td= rating.safety
+					%td= rating.favorite
+					%td= rating.user_id
+					%td= time_ago_in_words(rating.created_at)
