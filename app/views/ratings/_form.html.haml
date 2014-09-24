@@ -8,21 +8,21 @@
 	.field
 		%p{:style => "color: #fff;  font-size:1.2em;"}  Did you Connect?
 		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
-			= f.radio_button :success, false
+			= f.radio_button :success, false, :checked => "checked"
 			= f.label "No"
 		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
 			= f.radio_button :success, true
 			= f.label "Yes"
 		%p{:style => "color: #fff;  font-size:1.2em; padding-top:20px"}  Favorite this Member?
 		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
-			= f.radio_button :favorite, false
+			= f.radio_button :favorite, false, :checked => "checked"
 			= f.label "No"
 		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
 			= f.radio_button :favorite, true
 			= f.label "Yes"
 		%p{:style => "color: #fff; font-size:1.2em; padding-top:20px"}  Safety Guildines Followed?
 		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
-			= f.radio_button :safety, false
+			= f.radio_button :safety, false, :checked => "checked"
 			= f.label "No"
 		%span{:style => "padding: 20px;font-size:1.4em; color:#fff"}
 			= f.radio_button :safety, true
