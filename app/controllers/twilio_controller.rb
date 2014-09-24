@@ -87,7 +87,7 @@ class TwilioController < ApplicationController
 		)
 
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Thank you #{current_user.nick}, your identity has been verified."
+			r.Say user.nick
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
