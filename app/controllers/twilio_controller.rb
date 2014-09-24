@@ -97,9 +97,8 @@ class TwilioController < ApplicationController
 	end
 
 	def conference_that_doesnt_call
-		user = current_user
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Connecting you with a Feel community call from #{user.nick}"
+			r.Say "Connecting you with a Feel community call from if you would like to answer it please stay on the line"
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
