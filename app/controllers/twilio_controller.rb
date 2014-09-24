@@ -74,7 +74,7 @@ class TwilioController < ApplicationController
 
 
 	def conference_that_calls
-		users = (current_user.blank? ? User.where.not(:id => current_user.id) : User.where.not(:id => current_user.id))
+		users = (@caller.blank? ? User.all : User.where.not(:id => @caller.id))
 		user_hash = users.where('approved' => true).order("RANDOM()").limit(1)
 		user = user_hash.first
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
