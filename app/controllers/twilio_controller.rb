@@ -87,7 +87,7 @@ class TwilioController < ApplicationController
 		)
 
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Calling #{user.nick}"
+			r.Say "Calling #{user.nick} if they do not pick up in 30 seconds please hang up and try"
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
