@@ -74,7 +74,7 @@ class TwilioController < ApplicationController
 
 
 	def conference_that_calls
-		users = (current_user.blank? ? User.all : User.where.not(:id => current_user.id))
+		users = User.where.not(:id => current_user.id)
 		user_hash = users.where('approved' => true).order("RANDOM()").limit(1)
 		user = user_hash.first
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
@@ -87,7 +87,7 @@ class TwilioController < ApplicationController
 		)
 
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Calling #{user.nick} if they do not pick up in 30 seconds please hang up and try again"
+			r.Say "Connecting you with #{user.nick}. If they do not pick up in 30 seconds please hang up and try again"
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
@@ -98,7 +98,7 @@ class TwilioController < ApplicationController
 
 	def conference_that_doesnt_call
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Feel community call"
+			r.Say "Connecting you with a Feel community call"
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
