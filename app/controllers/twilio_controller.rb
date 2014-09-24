@@ -77,6 +77,7 @@ class TwilioController < ApplicationController
 		users = (@caller.blank? ? User.all : User.where.not(:id => @caller.id))
 		user_hash = users.where('approved' => true).order("RANDOM()").limit(1)
 		user = user_hash.first
+		@receiver = user
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token
@@ -98,7 +99,7 @@ class TwilioController < ApplicationController
 
 	def conference_that_doesnt_call
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say "Connecting you with a Feel community call"
+			r.Say "Connecting you with a Feel community call from #{@receiver.nick}"
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
