@@ -63,7 +63,7 @@ class TwilioController < ApplicationController
 		account_sid = 'AC8cc36fc273d176324fd6e2526c24b104'
 		auth_token = '75a8952da02e44984f2f340f21c29cb8'
 		client = Twilio::REST::Client.new account_sid, auth_token
-
+		@caller = user
 		call= client.account.calls.create(
 		:to => E164.normalize(user.phone),
 		:from => '+14155211825',
@@ -98,7 +98,7 @@ class TwilioController < ApplicationController
 
 	def conference_that_doesnt_call
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say 'BOOM'
+			r.Say "Feel community call from #{@caller.nick}"
 			r.Dial do |d|
 				d.Conference 'Double BOOM'
 			end
