@@ -31369,3 +31369,56 @@ Processing by VisitorsController#index as HTML
   Rendered visitors/index.html.haml within layouts/application (24.7ms)
   Rendered layouts/_messages.html.haml (0.3ms)
 Completed 200 OK in 610ms (Views: 608.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-23 18:32:25 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (43.0ms)
+  Rendered layouts/_messages.html.haml (0.4ms)
+Completed 200 OK in 512ms (Views: 504.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-23 18:32:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (18.5ms)
+  Rendered layouts/_messages.html.haml (5.6ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 544ms (Views: 492.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-23 18:32:58 -0700
+Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/facebook
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-09-23 18:32:58 -0700
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-23 18:32:59 -0700
+Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/facebook
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-09-23 18:32:59 -0700
+
+
+Started GET "/auth/facebook/callback?code=AQAoA_RoNAfcSZ5TpTwMEFiNrIk6K_eMiyvMKKjbZOlIN_hWpzwy7LlR7b0lfyff3vO7pjfdKQu88qWbdLPXlLjWzLi8mD9daF_fJbsIK3LLKx_jAsQiT_b9NWM1IWazC-AUgXAqSHbUqPOXhWXnabOnUR6W4QJHpSub0QeUe7ruKwL-eGhEA8aaE3DP00eyruAXPPBmOq8VVVZyVlfQ6s3QOFZ6yzaUclevhSSNnd2cBob4JJkKW_HzeAyGWfzvEeX-p4uH8ZF94g_y-nA48Ssb8ERutcZRCp7R2aQad_SShETh5lBepQJqm262PXMEoAQ&state=5226b3d4b9e6f38886a86b2fbe4953cd5c981e2ab764fdf0" for 127.0.0.1 at 2014-09-23 18:32:59 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAoA_RoNAfcSZ5TpTwMEFiNrIk6K_eMiyvMKKjbZOlIN_hWpzwy7LlR7b0lfyff3vO7pjfdKQu88qWbdLPXlLjWzLi8mD9daF_fJbsIK3LLKx_jAsQiT_b9NWM1IWazC-AUgXAqSHbUqPOXhWXnabOnUR6W4QJHpSub0QeUe7ruKwL-eGhEA8aaE3DP00eyruAXPPBmOq8VVVZyVlfQ6s3QOFZ6yzaUclevhSSNnd2cBob4JJkKW_HzeAyGWfzvEeX-p4uH8ZF94g_y-nA48Ssb8ERutcZRCp7R2aQad_SShETh5lBepQJqm262PXMEoAQ", "state"=>"5226b3d4b9e6f38886a86b2fbe4953cd5c981e2ab764fdf0", "provider"=>"facebook"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103487682752613'  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-23 18:33:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.haml within layouts/application (21.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 247ms (Views: 241.2ms | ActiveRecord: 0.3ms)

@@ -16,6 +16,8 @@ gem 'omniauth'
 gem 'e164'
 gem 'omniauth-facebook'
 gem 'twilio-ruby', '~> 3.12'
+gem 'intercom-rails', '~> 0.2.24'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
