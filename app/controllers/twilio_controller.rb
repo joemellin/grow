@@ -116,7 +116,7 @@ class TwilioController < ApplicationController
 			'+14158675311' => 'Virgil',
 			'+14158675312' => 'Marcel',
 		}
-		name = people[params['From']] || 'Monkey'
+		name =  'Monkey'
 		Twilio::TwiML::Response.new do |r|
 			r.Say "Hello #{name}"
 		end
