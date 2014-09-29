@@ -109,19 +109,11 @@ class TwilioController < ApplicationController
 	end
 
 	def voice_community
-
-		people = {
-			'+16617480240' => 'Curious George',
-			'+14158675310' => 'Boots',
-			'+14158675311' => 'Virgil',
-			'+14158675312' => 'Marcel',
-		}
-		name =  'Monkey'
-		Twilio::TwiML::Response.new do |r|
-			r.Say "Hello #{name}"
+		phone = params['From'] || 'Monkey'
+		response = Twilio::TwiML::Response.new do |r|
+			r.Say 'Hi, #{phone }you have dialed the feel community line.  When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ', :voice => 'alice'
+				r.Play 'http://linode.rabasa.com/cantina.mp3'
 		end
-
-		
  
 		render_twiml response
 	end
