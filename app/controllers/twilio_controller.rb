@@ -109,9 +109,9 @@ class TwilioController < ApplicationController
 	end
 
 	def voice_community
-		phone = params['From'] || 'Monkey'
 		response = Twilio::TwiML::Response.new do |r|
-			r.Say 'Hi, #{phone }you have dialed the feel community line.  When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ', :voice => 'alice'
+			phone = params['From'] || 'Monkey'
+			r.Say 'Hi, #{phone} you have dialed the feel community line.  When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ', :voice => 'alice'
 				r.Play 'http://linode.rabasa.com/cantina.mp3'
 		end
  
