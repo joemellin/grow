@@ -119,7 +119,7 @@ class TwilioController < ApplicationController
 		name = people[params['From']] || 'Monkey'
 		Twilio::TwiML::Response.new do |r|
 			r.Say "Hello #{name}"
-		end.text
+		end
 
 		
  
