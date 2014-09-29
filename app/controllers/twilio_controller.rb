@@ -120,7 +120,7 @@ class TwilioController < ApplicationController
 
 				r.Say "Hi, #{nick1} this is the E B T feel community line. To make a community connection just stay on the line and you will be connected. ", :voice => 'alice'
 				r.Say "Connecting you with #{user2.nick} "
-				r.Dial :timeout => 30  do |d|
+				r.Dial :timeout => 30, :callerId => '+14155211825'  do |d|
 					d.Number "#{number2}"
 				end 
 			else
