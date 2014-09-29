@@ -111,22 +111,10 @@ class TwilioController < ApplicationController
 	def voice_community
 		response = Twilio::TwiML::Response.new do |r|
 			if User.where(:phone => params['From']).present? 
-				users = (@caller.blank? ? User.all : User.where.not(:phone => params['From'])
-				user_hash = users.where('approved' => true).order("RANDOM()").limit(1)
-				user = user_hash.first
-				caller = User.where(:phone => params['From'])
-				cphone = caller.first.nick
-				call_from = client.account.calls.create(
-				:to => "+14152598215",
-				:from => '+14155211825',
-				:url => 'http://www.feelbyebt.com/twilio/conference_that_doesnt_call'
-				)
-
-
-				r.Say "Hi, #{cphone} this is the feel community line. Stay online to   When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ", :voice => 'alice'
-				r.Dial do |d|
-					d.Conference 'Double BOOM'
-				end
+				user = User.where(:phone => params['From'])
+				phone = user.first.nick
+				r.Say "Hi, #{phone} this is the feel community line. Stay online to   When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ", :voice => 'alice'
+					r.Play 'http://linode.rabasa.com/cantina.mp3'
 			else
 				r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com"
 			end
