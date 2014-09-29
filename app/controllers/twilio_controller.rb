@@ -110,9 +110,13 @@ class TwilioController < ApplicationController
 
 	def voice_community
 		response = Twilio::TwiML::Response.new do |r|
-			phone = params['From'] || 'Monkey'
-			r.Say "Hi, #{phone} you have dialed the feel community line.  When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ", :voice => 'alice'
-				r.Play 'http://linode.rabasa.com/cantina.mp3'
+			if User.where(:phone => params['From']).present? 
+				user = User.where(:phone => params['From'])
+				r.Say "Hi, #{user.nick} you have dialed the feel community line.  When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ", :voice => 'alice'
+					r.Play 'http://linode.rabasa.com/cantina.mp3'
+			else
+				
+			end
 		end
  
 		render_twiml response
