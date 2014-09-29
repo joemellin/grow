@@ -113,7 +113,7 @@ class TwilioController < ApplicationController
 			if User.where(:phone => params['From']).present? 
 				user = User.where(:phone => params['From'])
 				phone = user.first.nick
-				r.Say "Hi, #{phone} this is the feel community line. Stay online to   When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ", :voice => 'alice'
+				r.Say "Hi, #{phone} this is the feel community line. Visit feel by ebt dot come to make a call", :voice => 'alice'
 					r.Play 'http://linode.rabasa.com/cantina.mp3'
 			else
 				r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com"
