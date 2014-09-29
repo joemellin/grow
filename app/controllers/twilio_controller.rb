@@ -116,12 +116,12 @@ class TwilioController < ApplicationController
 				users = (user1.blank? ? User.all : User.where.not(:id => user1.id))
 				user_hash = users.where('approved' => false).order("RANDOM()").limit(1)
 				user2 = user_hash.first
-
+				number2 = E164.normalize(user2.phone)
 
 				r.Say "Hi, #{nick1} this is the E B T feel community line. To make a community connection just stay on the line and you will be connected. ", :voice => 'alice'
 				r.Say "Connecting you with #{user2.nick} "
 				r.Dial :timeout => 30  do |d|
-					d.Number E164.normalize(user2.phone)
+					d.Number "#{number2}"
 				end 
 			else
 				r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com"
