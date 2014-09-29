@@ -114,7 +114,7 @@ class TwilioController < ApplicationController
 				user1 = User.where(:phone => params['From']).first
 				nick1 = user1.nick
 				users = (user1.blank? ? User.all : User.where.not(:id => user1.id))
-				user_hash = users.where('approved' => false).order("RANDOM()").limit(1)
+				user_hash = users.where('approved' => true).order("RANDOM()").limit(1)
 				user2 = user_hash.first
 				number2 = E164.normalize(user2.phone)
 
@@ -124,7 +124,7 @@ class TwilioController < ApplicationController
 					d.Number "#{number2}"
 				end 
 			else
-				r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com"
+				r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com and sign up or check to make sure that the phone number you are calling from is on your profile."
 			end
 		end
  
