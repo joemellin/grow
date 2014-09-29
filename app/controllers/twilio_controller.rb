@@ -111,9 +111,15 @@ class TwilioController < ApplicationController
 	def voice_community
 		response = Twilio::TwiML::Response.new do |r|
 			if User.where(:phone => params['From']).present? 
-				user = User.where(:phone => params['From'])
-				phone = user.first.nick
-				r.Say "Hi, #{phone} this is the feel community line. Open the", :voice => 'alice'
+				user1 = User.where(:phone => params['From']).first
+				nick1 = user1.nick
+				users = (user1.blank? ? User.all : User.where.not(:id => user1.id))
+				user_hash = users.where('approved' => false).order("RANDOM()").limit(1)
+				user2 = user_hash.first
+
+
+				r.Say "Hi, #{nick1} this is the E B T feel community line. To make a community connection just stay on the line and you will be connected. ", :voice => 'alice'
+				r.Say "Connecting you with #{user2.nick} "
 				r.Dial :timeout => 30  do |d|
 					d.Number '+14152598215'
 				end 
