@@ -114,7 +114,10 @@ class TwilioController < ApplicationController
 				user = User.where(:phone => params['From'])
 				phone = user.first.nick
 				r.Say "Hi, #{phone} this is the feel community line. Open the", :voice => 'alice'
-				r.Dial :number => "+14152598215"
+				r.Dial :timeout => 30  do |d|
+					d.Number '+14152598215'
+				end
+			end 
 			else
 				r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com"
 			end
