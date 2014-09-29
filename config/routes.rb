@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 	post 'twilio/voice_community' => 'twilio#voice_community'
 	post 'twilio/voice_support' => 'twilio#voice_support'
 
+	get 'twilio/handle_gather' => 'twilio#handle_gather'
+
 	get 'connecting' => 'calls#connecting'
 	get 'first' => 'calls#first'
 	get '/users/:id/admin' => 'users#admin'

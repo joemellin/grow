@@ -114,13 +114,26 @@ class TwilioController < ApplicationController
 				user = User.where(:phone => params['From'])
 				phone = user.first.nick
 				r.Say "Hi, #{phone} this is the feel community line. Visit feel by ebt dot come to make a call", :voice => 'alice'
-					r.Play 'http://linode.rabasa.com/cantina.mp3'
+				r.Play 'http://linode.rabasa.com/cantina.mp3'
+				r.Gather :numDigits => '1', :action => 'http://www.feelbyebt.com/twilio/conference_that_doesnt_call', :method => 'get' do |g|
+					g.Say 'To speak to a real monkey, press 1.'
+					g.Say 'Press any other key to start over.'
+				end
+		end
 			else
 				r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com"
 			end
 		end
  
 		render_twiml response
+	end
+
+	def handle_gather
+		redirect 'http://www.feelbyebt.com/twilio/voice_community' unless params['Digits'] == '1'
+  	Twilio::TwiML::Response.new do |r|
+	    r.Dial '+13105551212' ### Connect the caller to Koko, or your cell
+	    r.Say 'The call failed or the remote party hung up. Goodbye.'
+  	end.text
 	end
 
 	def voice_support
