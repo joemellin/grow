@@ -116,7 +116,7 @@ class TwilioController < ApplicationController
 				r.Say "Hi, #{phone} you have dialed the feel community line.  When feel members call you, you will receive the calls from this number.  To connect with a member visit the site and click connect. ", :voice => 'alice'
 					r.Play 'http://linode.rabasa.com/cantina.mp3'
 			else
-
+				r.Say "Not Working"
 			end
 		end
  
