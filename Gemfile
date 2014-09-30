@@ -17,6 +17,7 @@ gem 'e164'
 gem 'omniauth-facebook'
 gem 'twilio-ruby', '~> 3.12'
 gem 'intercom-rails', '~> 0.2.24'
+gem 'rollbar', '~> 1.0.0'
 
 group :development do
   gem 'better_errors'
