@@ -127,6 +127,7 @@ class TwilioController < ApplicationController
 					end 
 				else
 					r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com and sign up or check to make sure that the phone number you are calling from is on your profile."
+				end
 			else
 				r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com and sign up or check to make sure that the phone number you are calling from is on your profile."
 			end
