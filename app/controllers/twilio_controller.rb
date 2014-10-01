@@ -113,21 +113,17 @@ class TwilioController < ApplicationController
 			if User.where(:phone => params['From']).present? 
 				user1 = User.where(:phone => params['From']).first
 
-				if user1.approved == true ?
-					nick1 = user1.nick
-					users = (user1.blank? ? User.all : User.where.not(:id => user1.id))
-					user_hash = users.where('approved' => true).order("RANDOM()").limit(1)
-					user2 = user_hash.first
-					number2 = E164.normalize(user2.phone)
+				nick1 = user1.nick
+				users = (user1.blank? ? User.all : User.where.not(:id => user1.id))
+				user_hash = users.where('approved' => true).order("RANDOM()").limit(1)
+				user2 = user_hash.first
+				number2 = E164.normalize(user2.phone)
 
-					r.Say "Hi, #{nick1} this is the E B T feel community line. To make a community connection just stay on the line and you will be connected. ", :voice => 'alice'
-					r.Say "Connecting you with #{user2.nick} "
-					r.Dial :timeout => 30, :callerId => '+14155211825'  do |d|
-						d.Number "#{number2}"
-					end 
-				else
-					r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com and sign up or check to make sure that the phone number you are calling from is on your profile."
-				end
+				r.Say "Hi, #{nick1} this is the E B T feel community line. To make a community connection just stay on the line and you will be connected. ", :voice => 'alice'
+				r.Say "Connecting you with #{user2.nick} "
+				r.Dial :timeout => 30, :callerId => '+14155211825'  do |d|
+					d.Number "#{number2}"
+				end 
 			else
 				r.Say "Hi you have received a call from the Feel community line.  To make a call visit feel by ebt dot com and sign up or check to make sure that the phone number you are calling from is on your profile."
 			end
