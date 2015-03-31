@@ -1,10 +1,27 @@
-.row
-	.col-sm-4.col-sm-offset-4.col-xs-10.col-xs-offset-1
-		.center
-			%h1.tk-swingdancer{:style => "color: #fff;font-size:7em; padding:30px 0 50px; line-height:80px;"} feel
-			%h4{:style => "color: #fff;"} Emotional Tools
-			%h4{:style => "color: #fff;margin:0px;"} &
-			%h4{:style => "color: #fff;padding-bottom:50px;"}  A Community of Support
-			%p=link_to "Learn More", howitworks_path, :class => "btn btn-default btn-lg",:style => "color:#fff;background-color:#37EC47; border-color:#fff;border-width: 2px; font-size:1.5em; width:200px;"
-			%p=link_to "Join  - Sign In", signin_path, :class => "btn btn-default",:style => "color:#fff;background-color:#58CEEE; border-color:#fff;border-width: 2px; font-size:1.3em;width:200px;"
-
+.row{:style => "background-image: url(/assets/laurel.jpg);width:100%; margin:0px;height:600px;"}
+	.col-sm-12{:style => "text-align:center;padding-top:200px"}
+		%h1{:style => "font-size:6em;color:white;text-shadow: black 0.05em 0.05em 0.1em;"} Great Cultures are Supported
+		%p{:style => "font-size:2em;color:white;text-shadow: black 0.05em 0.05em 0.1em;"} Give your employees the support they need to be thrive.
+.container
+	.row{:style => "font-size:2em;color:white;text-align:center"}
+		.col-sm-10.col-sm-offset-1{:style => "padding: 80px 0 80px;"}
+			%i Feel enables you to provide free support & emotional skills training for your employees.  Each will have access our mobile applications and network of coaches.
+ 
+.container
+	.row{:style => "font-size:2em;color:white;text-align:center;padding-bottom:100px;"}
+		.col-sm-4
+			%p
+				%b Private
+			%p We give your employees the privacy they need.
+		.col-sm-4
+			%p
+				%b Effective
+			%p Our method has been shown to be effective in decreasing stress.
+		.col-sm-4
+			%p
+				%b Skills Training
+			%p We teach individuals skills so that they can keep with them.
+.row{:style => "background-image: url(/assets/big.jpg);width:100%; margin:0px;height:600px;"}
+	.col-sm-12{:style => "text-align:center;padding-top:200px"}
+		%h1{:style => "font-size:6em;color:white;text-shadow: black 0.05em 0.05em 0.1em;"} Is your company supported?
+		=link_to "Get Supported", "mailto:joe@ebt.org", :class => "btn  btn-lg", :style => "border-color:White; color:white;font-size:3em; line-height:1.5em; margin-top:40px;text-shadow: black 0.05em 0.05em 0.1em;"

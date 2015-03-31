@@ -38121,3 +38121,544 @@ Processing by VisitorsController#index as HTML
   Rendered layouts/_messages.html.haml (4.8ms)
   [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 850ms (Views: 772.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:18:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (9.6ms)
+  Rendered layouts/_messages.html.haml (9.2ms)
+Completed 200 OK in 1006ms (Views: 923.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:19:04 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (10.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 583ms (Views: 579.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:19:17 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (11.2ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 443ms (Views: 439.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:19:23 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (13.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 738ms (Views: 733.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:19:49 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (30.2ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 718ms (Views: 712.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:20:23 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (9.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 462ms (Views: 458.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:20:35 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (36.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 358ms (Views: 352.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:21:04 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (6.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 325ms (Views: 321.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:21:11 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (10.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 299ms (Views: 294.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:21:30 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (9.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 268ms (Views: 264.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:21:56 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (32.4ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 559ms (Views: 553.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:22:08 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (12.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 325ms (Views: 319.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:22:37 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (12.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 382ms (Views: 377.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:22:42 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (11.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 389ms (Views: 385.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:23:06 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (12.0ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 291ms (Views: 287.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:24:16 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (10.0ms)
+  Rendered layouts/_messages.html.haml (0.5ms)
+Completed 200 OK in 278ms (Views: 273.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:24:29 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 286ms (Views: 282.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:24:49 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (8.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 327ms (Views: 323.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:24:55 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (8.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 275ms (Views: 271.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:25:08 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (17.1ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 368ms (Views: 361.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:25:29 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (12.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 303ms (Views: 299.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:27:55 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (84.7ms)
+  Rendered layouts/_messages.html.haml (0.6ms)
+Completed 200 OK in 635ms (Views: 610.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:28:07 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 471ms (Views: 466.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:28:22 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (16.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 294ms (Views: 288.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:28:35 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (23.0ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 390ms (Views: 386.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:29:31 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (18.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 371ms (Views: 366.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:31:54 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (64.2ms)
+  Rendered layouts/_messages.html.haml (0.4ms)
+Completed 200 OK in 601ms (Views: 590.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:32:04 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (7.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 386ms (Views: 379.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:32:23 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (40.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 497ms (Views: 493.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:32:50 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (9.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 325ms (Views: 321.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:33:00 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (8.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 278ms (Views: 274.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:33:48 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (15.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 294ms (Views: 290.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:34:04 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (9.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 294ms (Views: 287.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:34:27 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (13.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 300ms (Views: 294.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:35:43 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (22.6ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 386ms (Views: 382.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:36:08 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (11.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 319ms (Views: 315.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:39:05 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (29.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 1387ms (Views: 1367.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:41:23 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (86.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 716ms (Views: 682.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:42:02 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (23.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 387ms (Views: 378.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:44:04 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (47.4ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 465ms (Views: 460.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:44:25 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (25.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 359ms (Views: 355.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:44:38 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (12.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 285ms (Views: 281.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:45:16 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (47.2ms)
+Completed 500 Internal Server Error in 62ms
+
+SyntaxError - syntax error, unexpected '\n', expecting =>
+/Users/josephmellin/apps/grow/app/views/visitors/index.html.haml:28: unknown regexp options - dv
+/Users/josephmellin/apps/grow/app/views/visitors/index.html.haml:28: syntax error, unexpected $undefined
+));}\n  </div>\n</div>\n", -2, false);::Haml::Util.h...
+                       ^
+/Users/josephmellin/apps/grow/app/views/visitors/index.html.haml:28: unterminated string meets end of file
+/Users/josephmellin/apps/grow/app/views/visitors/index.html.haml:28: syntax error, unexpected end-of-input, expecting ')':
+   () Users/josephmellin/apps/grow/app/views/visitors/index.html.haml:27:in `'
+  actionview (4.1.6) lib/action_view/template.rb:297:in `compile'
+  actionview (4.1.6) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.1.6) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.1.6) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.1.6) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+   () Users/josephmellin/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rollbar (1.0.1) lib/rollbar/middleware/rails/rollbar_request_store.rb:13:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  rollbar (1.0.1) lib/rollbar/middleware/rails/show_exceptions.rb:19:in `call_with_rollbar'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/josephmellin/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/josephmellin/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/josephmellin/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+[Rollbar] Reporting internal error encountered while sending data to Rollbar.
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=478b6a9b-616c-4fa2-bae9-55cad848aad3 (only available if report was successful)
+
+
+Started POST "/__better_errors/3340733795165ea7/variables" for 127.0.0.1 at 2015-03-31 14:45:18 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:45:34 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (27.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 421ms (Views: 416.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:45:59 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (12.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 314ms (Views: 300.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:46:10 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (12.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 287ms (Views: 284.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:46:32 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (19.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 349ms (Views: 343.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:46:38 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (16.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 318ms (Views: 309.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:46:44 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (15.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 289ms (Views: 284.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:47:03 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (13.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 313ms (Views: 303.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:47:08 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (14.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 315ms (Views: 311.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:48:08 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (77.1ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 863ms (Views: 840.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:49:22 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (97.8ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 792ms (Views: 768.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:50:15 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (21.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 398ms (Views: 388.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:51:48 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (31.3ms)
+  Rendered layouts/_messages.html.haml (0.5ms)
+Completed 200 OK in 510ms (Views: 498.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:52:00 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (18.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 457ms (Views: 452.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:52:21 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (17.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 309ms (Views: 305.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 14:53:13 -0700
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.haml within layouts/application (76.7ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 571ms (Views: 555.8ms | ActiveRecord: 0.0ms)
